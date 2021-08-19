@@ -5,7 +5,8 @@ import json
 data_path = "https://s3-us-west-2-amazonaws.com/usgs-lidar-public"
 #region = 'USGS_LPC_CO_SoPlatteRiver_Lot5_2013_LAS_2015/'
 region= "IA_FullState"
-bound = "([-93.756155, 41.918015, -93.747334, 41.921429])"
+#([-10425171.940, -10423171.940], [5164494.710, 5166494.710])
+bound = "([-93.756155, 41.918015], [-93.747334, 41.921429])"
 public_access_path = data_path + region + "ept.json"
 output_flename_laz = "laz/SoPlatteRiver.laz"
 output_flename_tif = "tif/SoPlatteRiver.tif"
