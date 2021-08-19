@@ -25,6 +25,6 @@ model to select with a specified input and get a desired output. For example, su
 boundary (GPS coordinates polygon) and receive back a raster of the height of the terrain
 within the boundary. The expected inputs and outputs are
 Inputs:
-● Field boundary polygon in geopandas dataframe
-    ○ All CRS’s (coordinate reference systems) should be accepted
-● Desired output CRS
+- Field boundary polygon in geopandas dataframe
+    - All CRS’s (coordinate reference systems) should be accepted
+- Desired output CRS
