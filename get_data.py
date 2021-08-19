@@ -9,7 +9,7 @@ bound = "([-93.756155, 41.918015, -93.747334, 41.921429])"
 public_access_path = data_path + region + "ept.json"
 output_flename_laz = "laz/SoPlatteRiver.laz"
 output_flename_tif = "tif/SoPlatteRiver.tif"
-pipline_path = "../get_data.json"
+pipline_path = "../fetch_data.json"
 #region and boundary
 output_flename_laz = "laz/SoPlatteRiver.laz"
 
