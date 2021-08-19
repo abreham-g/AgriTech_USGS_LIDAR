@@ -36,7 +36,7 @@
             "nodata": -9999,
             "output_type":"idw",
             "resolution":1,
-            "type":"writers,gdal",
+            "type":"writers.gdal",
             "window_size":6
             
         }
