@@ -19,4 +19,12 @@ The workflow for this project is as follows
     and deployment
 - Building a codebase that communicates with the provided data source and extract
     needed information based on the parameters passed
-
+# Data Fetching and Loading
+our task is to write a modular python code/package to connect to the API, query the data
+model to select with a specified input and get a desired output. For example, submit a
+boundary (GPS coordinates polygon) and receive back a raster of the height of the terrain
+within the boundary. The expected inputs and outputs are
+Inputs:
+● Field boundary polygon in geopandas dataframe
+    ○ All CRS’s (coordinate reference systems) should be accepted
+● Desired output CRS
