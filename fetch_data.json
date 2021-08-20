@@ -13,6 +13,7 @@
       },
       {
         "out_srs": "EPSG:26915",
+        "type": "filters.reprojection",
         "tag": "reprojection"
       },
       {

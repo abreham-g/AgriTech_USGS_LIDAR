@@ -9,11 +9,9 @@ import json
 Data_Path = "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/"
 REGION= "IA_FullState"
 BOUND = "([-10425171.940, -10423171.940], [5164494.710, 5166494.710])"
-output_flename_laz = "laz/SoPlatteRiver.laz"
-output_flename_tif = "tif/SoPlatteRiver.tif"
+output_flename_laz = "laz/SoPlatte"
+output_flename_tif = "tif/SoPlatte"
 pipeline_path = "./fetch_data.json"
-
-output_flename_laz = "laz/SoPlatteRiver.laz"
 
 def get_raster_terrain(bounds:str = BOUND,
                        region:str = REGION,
@@ -28,8 +26,8 @@ def get_raster_terrain(bounds:str = BOUND,
 
     the_json['pipeline'][0]['bounds']= bounds
     the_json['pipeline'][0]['filename']= public_access_path + region + "/ept.json"
-    the_json['pipeline'][3]['filename']= OUTPUT_FILENAME_LAZ
-    the_json['pipeline'][4]['filename']= OUTPUT_FILENAME_TIF
+    the_json['pipeline'][3]['filename']=  "laz/" + OUTPUT_FILENAME_LAZ + ".laz"
+    the_json['pipeline'][4]['filename']= "tif/" + OUTPUT_FILENAME_TIF + ".laz"
 
    # pipline = pdal.pipeline(json.dumps(the_json))
     pipline = pdal.Pipeline(json.dumps(the_json))
