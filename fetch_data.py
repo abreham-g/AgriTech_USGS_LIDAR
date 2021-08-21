@@ -1,7 +1,6 @@
 import pdal
 import json
 
-#region = 'USGS_LPC_CO_SoPlatteRiver_Lot5_2013_LAS_2015/'
 #bound = "([-93.756155, 41.918015], [-93.747334, 41.921429])"
 #public_access_path = data_path + region + "ept.json"
 #Data_Path = "https://s3-us-west-2-amazonaws.com/usgs-lidar-public"
