@@ -9,7 +9,7 @@ import json
 Data_Path = "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/"
 REGION= "IA_FullState"
 BOUND = "([-10425171.940, -10423171.940], [5164494.710, 5166494.710])"
-output_flename_laz = "Platte"
+output_flename_laz = "SoPlatte"
 output_flename_tif = "Platte"
 pipeline_path = "./fetch_data.json"
 
@@ -33,11 +33,12 @@ def get_raster_terrain(bounds:str = BOUND,
     pipline = pdal.Pipeline(json.dumps(the_json))
 
     try:
-        pipline.execute()
+        res = pipline.execute()
         metadata = pipline.metadata
         print('metadata: ', metadata)
         log = pipline.log
         print("logs: ", log)
+        return pipline.arrays
     except RuntimeError as e:
         print(e)
 
