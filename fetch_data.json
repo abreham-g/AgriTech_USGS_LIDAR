@@ -7,12 +7,20 @@
         "tag": "readdata"
       },
       {
+        "inputs": [ "readdata" ],
+        "polygon": "",
+        "type": "filters.crop",
+         "tag": "crop"
+
+    },
+      {
         "limits": "Classification![2:7], Classification![9:9]",
         "type": "filters.range",
         "tag": "nonoise"
       },
       {
         "out_srs": "EPSG:26915",
+        "in_srs": "EPSG:3857",
         "type": "filters.reprojection",
         "tag": "reprojection"
       },

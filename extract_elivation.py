@@ -1,9 +1,11 @@
 import numpy as np
-import laspy as lp
+# import laspy as lp
 from shapely.geometry import box, Point, Polygon
-from laspy.file import File
+# from laspy.file import File
 from geopandas import GeoDataFrame
 import fetch_data
+import geopandas as gpd
+from shapely.geometry import Polygon, Point
 
 input_path = "laz/"
 dataname = "SoPlatte"
@@ -34,10 +36,9 @@ def elevation(x, y, z):
     
     return dataframe
 
-def get_elevation(BOUND:str = bound,
-               REGION:str = region):
+def get_elevation(polygon: Polygon, crs: int, REGION:str = region):
     
-    data = fetch_data.get_raster_terrain(bound, region)[0]
+    data = fetch_data.get_raster_terrain(polygon=polygon, crs=crs, region=region)[0]
     x, y, z = np.array(data["X"]), np.array(data["Y"]), np.array(data["Z"])
     
     
